@@ -1,0 +1,11 @@
+<div>
+  <span (click)="toggleNode()" class="element">
+    <button mat-fab color="accent">+</button>
+    {{ node.treeName }} {{ node?.owner }}</span
+  >
+  <ul *ngIf="expanded" class="list">
+    <li *ngFor="let child of node.steps">
+      <app-tree-node [node]="child"></app-tree-node>
+    </li>
+  </ul>
+</div>
